@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Brandon Grotesque, Georgia, serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #00aaff, #00ff6c);
+  /* background-color: gray; */
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2em;
+  border: 1px solid gray;
+  background-color: rgb(0, 0, 0, 0.9);
+  color: antiquewhite;
+}
+
+.calculator-grid > button:hover {
+  background-color: rgb(0, 0, 0, 0.75);
+}
+
+.calculator-grid .function {
+  color: blue;
+  background-color: rgb(18, 9, 7, 0.95);
+}
+
+.calculator-grid .function:hover {
+  background-color: rgb(18, 9, 7, 0.9);
+}
+
+.calculator-grid .operator {
+  font-size: 3em;
+}
+
+.calculator-grid .equals {
+  background-color: blue;
+  color: white;
+}
+
+.calculator-grid .equals:hover {
+  background-color: rgb(0, 0, 255, 0.8);
+}
+.span-two {
+  grid-row: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  color: gray;
+  background-color: rgb(0, 0, 0, 0.9);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 40px 10px 30px 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: antiquewhite;
+  font-size: 3rem;
+}
+
+.output .current-operand {
+  font-size: 1.5rem;
+}
